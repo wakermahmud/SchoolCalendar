@@ -1,0 +1,4 @@
+services:
+#    kl_calendar.example:
+#        class: KL\CalendarBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
