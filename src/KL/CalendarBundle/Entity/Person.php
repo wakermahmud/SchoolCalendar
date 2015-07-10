@@ -7,8 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Person
  *
- * @ORM\Table()
- * @ORM\Entity
+ * @ORM\MappedSuperclass
  */
 class Person
 {

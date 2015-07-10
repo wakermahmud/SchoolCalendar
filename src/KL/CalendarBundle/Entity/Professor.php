@@ -2,26 +2,17 @@
 
 namespace KL\CalendarBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use KL\CalendarBundle\Entity\Person as Person;
 
 /**
- * Person
+ * Professor
  *
  * @ORM\Table()
  * @ORM\Entity
  */
-class Professor  extends  Person
+class Professor extends Person
 {
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
     /**
      * @var float
      *
@@ -33,16 +24,6 @@ class Professor  extends  Person
      * @ORM\OneToMany(targetEntity="Course", mappedBy="$professor")
      */
     protected $course;
-
-    /**
-     * Get id
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set courses_type
@@ -82,8 +63,7 @@ class Professor  extends  Person
 
     /**
      * Get course
-     *
-     * @return  
+     * @return ArrayCollection
      */
     public function getCourse()
     {
