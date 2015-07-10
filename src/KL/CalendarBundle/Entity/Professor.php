@@ -16,7 +16,7 @@ class Professor extends Person
     /**
      * @var float
      *
-     * @ORM\Column(name="price_hours", type="decimal", scale=2)
+     * @ORM\Column(name="price_hours", type="decimal", scale=2, nullable=true)
      */
     private $price_hours;
 
@@ -54,7 +54,7 @@ class Professor extends Person
      * @param  $course
      * @return Professor
      */
-    public function setCourse($course = null)
+    public function setCourse($course)
     {
         $this->course = $course;
 

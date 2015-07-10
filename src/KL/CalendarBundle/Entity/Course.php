@@ -24,28 +24,28 @@ class Course
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
     private $name;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="duration", type="time")
+     * @ORM\Column(name="duration", type="time", nullable=true)
      */
     private $duration;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="date", type="datetime")
+     * @ORM\Column(name="date", type="datetime", nullable=true)
      */
     private $date;
 
@@ -146,7 +146,7 @@ class Course
      * @param  $courseType
      * @return Course
      */
-    public function setCourseType($courseType = null)
+    public function setCourseType($courseType)
     {
         $this->subject = $courseType;
 
@@ -169,7 +169,7 @@ class Course
      * @param $professor
      * @return Course
      */
-    public function setProfessor($professor = null)
+    public function setProfessor($professor)
     {
         $this->professor = $professor;
 
@@ -208,7 +208,7 @@ class Course
      * @param \KL\CalendarBundle\Entity\Subject $subject
      * @return Course
      */
-    public function setSubject(\KL\CalendarBundle\Entity\Subject $subject = null)
+    public function setSubject(\KL\CalendarBundle\Entity\Subject $subject)
     {
         $this->subject = $subject;
 

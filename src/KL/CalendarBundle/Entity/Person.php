@@ -23,63 +23,63 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="first_name", type="string", length=255, nullable=true)
      */
-    private $name;
+    private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="last_name", type="string", length=255)
+     * @ORM\Column(name="last_name", type="string", length=255, nullable=true)
      */
-    private $last_name;
+    private $lastName;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birth_date", type="date")
+     * @ORM\Column(name="birth_date", type="date", nullable=true)
      */
-    private $birth_date;
+    private $birthDate;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(name="email", type="string", length=255, nullable=true)
      */
     private $email;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="street_number", type="integer")
+     * @ORM\Column(name="street_number", type="integer", nullable=true)
      */
-    private $street_number;
+    private $streetNumber;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="street_name", type="string", length=255)
+     * @ORM\Column(name="street_name", type="string", length=255, nullable=true)
      */
-    private $street_name;
+    private $streetName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="postal_code", type="string", length=7)
+     * @ORM\Column(name="postal_code", type="string", length=7, nullable=true)
      */
-    private $postal_code;
+    private $postalCode;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="city", type="string", length=255)
+     * @ORM\Column(name="city", type="string", length=255, nullable=true)
      */
     private $city;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="country", type="string", length=255, nullable=true)
      */
     private $country;
 
@@ -95,14 +95,14 @@ class Person
     }
 
     /**
-     * Set name
+     * Set firstName
      *
-     * @param string $name
+     * @param string $firstName
      * @return Person
      */
-    public function setName($name)
+    public function setFirstName($firstName)
     {
-        $this->name = $name;
+        $this->firstName = $firstName;
 
         return $this;
     }
@@ -112,55 +112,55 @@ class Person
      *
      * @return string 
      */
-    public function getName()
+    public function getFirstName()
     {
-        return $this->name;
+        return $this->firstName;
     }
 
     /**
-     * Set last_name
+     * Set lastName
      *
      * @param string $lastName
      * @return Person
      */
     public function setLastName($lastName)
     {
-        $this->last_name = $lastName;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get last_name
+     * Get lastName
      *
      * @return string 
      */
     public function getLastName()
     {
-        return $this->last_name;
+        return $this->lastName;
     }
 
     /**
-     * Set birth_date
+     * Set birthDate
      *
      * @param \DateTime $birthDate
      * @return Person
      */
     public function setBirthDate($birthDate)
     {
-        $this->birth_date = $birthDate;
+        $this->birthDate = $birthDate;
 
         return $this;
     }
 
     /**
-     * Get birth_date
+     * Get birthDate
      *
      * @return \DateTime 
      */
     public function getBirthDate()
     {
-        return $this->birth_date;
+        return $this->birthDate;
     }
 
     /**
@@ -187,26 +187,26 @@ class Person
     }
 
     /**
-     * Set street_number
+     * Set streetNumber
      *
      * @param integer $streetNumber
      * @return Person
      */
     public function setStreetNumber($streetNumber)
     {
-        $this->street_number = $streetNumber;
+        $this->streetNumber = $streetNumber;
 
         return $this;
     }
 
     /**
-     * Get street_number
+     * Get streetNumber
      *
      * @return integer 
      */
     public function getStreetNumber()
     {
-        return $this->street_number;
+        return $this->streetNumber;
     }
 
     /**
@@ -217,42 +217,42 @@ class Person
      */
     public function setStreetName($streetName)
     {
-        $this->street_name = $streetName;
+        $this->streetName = $streetName;
 
         return $this;
     }
 
     /**
-     * Get street_name
+     * Get streetName
      *
      * @return string 
      */
     public function getStreetName()
     {
-        return $this->street_name;
+        return $this->streetName;
     }
 
     /**
-     * Set postal_code
+     * Set postalCode
      *
      * @param string $postalCode
      * @return Person
      */
     public function setPostalCode($postalCode)
     {
-        $this->postal_code = $postalCode;
+        $this->postalCode = $postalCode;
 
         return $this;
     }
 
     /**
-     * Get postal_code
+     * Get postalCode
      *
      * @return string 
      */
     public function getPostalCode()
     {
-        return $this->postal_code;
+        return $this->postalCode;
     }
 
     /**
