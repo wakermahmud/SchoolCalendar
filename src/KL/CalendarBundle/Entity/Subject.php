@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity
  */
-class Course_Type
+class Subject
 {
     /**
      * @var integer
@@ -30,7 +30,7 @@ class Course_Type
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Course", mappedBy="$course_type")
+     * @ORM\OneToMany(targetEntity="Course", mappedBy="$subject")
      */
     protected $course;
 
@@ -76,7 +76,7 @@ class Course_Type
      * Add course
      *
      * @param  $course
-     * @return Course_Type
+     * @return Subject
      */
     public function addCourse($course)
     {

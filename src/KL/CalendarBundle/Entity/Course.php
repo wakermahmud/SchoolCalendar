@@ -50,10 +50,10 @@ class Course
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Course_Type", inversedBy="course")
-     * @ORM\JoinColumn(name="course_type_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Subject", inversedBy="course")
+     * @ORM\JoinColumn(name="subject_id", referencedColumnName="id")
      */
-    protected $course_type;
+    protected $subject;
 
     /**
      * @ORM\ManyToOne(targetEntity="Professor", inversedBy="course")
@@ -141,26 +141,26 @@ class Course
     }
 
     /**
-     * Set course_type
+     * Set subject
      *
      * @param  $courseType
      * @return Course
      */
     public function setCourseType($courseType = null)
     {
-        $this->course_type = $courseType;
+        $this->subject = $courseType;
 
         return $this;
     }
 
     /**
-     * Get course_type
+     * Get subject
      *
      * @return  
      */
     public function getCourseType()
     {
-        return $this->course_type;
+        return $this->subject;
     }
 
     /**
@@ -200,5 +200,28 @@ class Course
     public function setDate($date)
     {
         $this->date = $date;
+    }
+
+    /**
+     * Set subject
+     *
+     * @param \KL\CalendarBundle\Entity\Subject $subject
+     * @return Course
+     */
+    public function setSubject(\KL\CalendarBundle\Entity\Subject $subject = null)
+    {
+        $this->subject = $subject;
+
+        return $this;
+    }
+
+    /**
+     * Get subject
+     *
+     * @return \KL\CalendarBundle\Entity\Subject 
+     */
+    public function getSubject()
+    {
+        return $this->subject;
     }
 }
