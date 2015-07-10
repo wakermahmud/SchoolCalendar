@@ -1,0 +1,40 @@
+{% extends "KLCalendarBundle::layout.html.twig" %}
+
+    {% block title %}Add teacher {{ parent() }}{% endblock %}
+    {% block content %}
+        <div class="row col-sm-6 col-lg-offset-3">
+            <form method="post" class="" action="" {{ form_enctype(form) }}>
+                <div class="form-group">
+                    {{ form_widget(form.name) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.subject) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.professor) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.description) }}
+                </div>
+                <div class="form-group">
+                    <div class='input-group date dateTimePicker'>
+                        {{ form_widget(form.date) }}
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class='input-group date timePicker'>
+                        {{ form_widget(form.duration) }}
+                        <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary input-xlarge" value="Add"/>
+            </form>
+        </div>
+    {% endblock %}
+
+
