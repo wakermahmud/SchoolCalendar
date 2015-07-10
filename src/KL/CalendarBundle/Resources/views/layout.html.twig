@@ -5,21 +5,17 @@
         <link rel="shortcut icon" type="image/x-icon">
         <link rel="stylesheet" href="{{ asset('bundles/klcalendar/css/bootstrap.min.css') }}" type="text/css"/>
         <link rel="stylesheet" href="{{ asset('bundles/klcalendar/css/bootstrap-datetimepicker.min.css') }}" type="text/css"/>
-        <link rel="stylesheet" href="{{ asset('bundles/klcalendar/css/jquery.timepicker.css') }}" type="text/css"/>
         <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js" type="text/javascript"></script>
         <script src=" {{ asset('bundles/klcalendar/js/bootstrap.min.js') }}" type="text/javascript"></script>
         <script src=" {{ asset('bundles/klcalendar/js/transition.js') }}" type="text/javascript"></script>
         <script src=" {{ asset('bundles/klcalendar/js/collapse.js') }}" type="text/javascript"></script>
         <script src=" {{ asset('bundles/klcalendar/js/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>
-        <script src=" {{ asset('bundles/klcalendar/js/jquery.timepicker.min.js') }}" type="text/javascript"></script>
         <script type="text/javascript">
             $(function () {
                 $('.dateTimePicker').datetimepicker();
-                $('.timePicker').timepicker({
-                    'minTime': '2:00pm',
-                    'maxTime': '11:30pm',
-                    'showDuration': true
+                $('.timePicker').datetimepicker({
+                    format: 'LT'
                 });
             });
         </script>
