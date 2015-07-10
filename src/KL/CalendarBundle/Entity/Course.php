@@ -2,7 +2,6 @@
 
 namespace KL\CalendarBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,6 +41,13 @@ class Course
      * @ORM\Column(name="duration", type="time")
      */
     private $duration;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
 
     /**
      * @ORM\ManyToOne(targetEntity="Course_Type", inversedBy="course")
@@ -127,7 +133,7 @@ class Course
     /**
      * Get duration
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDuration()
     {
@@ -178,5 +184,21 @@ class Course
     public function getProfessor()
     {
         return $this->professor;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
     }
 }
