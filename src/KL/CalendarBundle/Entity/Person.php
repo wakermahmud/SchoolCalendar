@@ -133,11 +133,21 @@ class Person
     /**
      * Get lastName
      *
-     * @return string 
+     * @return string
      */
     public function getLastName()
     {
         return $this->lastName;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string
+     */
+    public function getFullName()
+    {
+        return $this->lastName . ' ' . $this->firstName;
     }
 
     /**
