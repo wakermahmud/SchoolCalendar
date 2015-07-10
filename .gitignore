@@ -15,8 +15,3 @@ app/config/parameters.yml.dist
 
 composer.lock
 
-app/config/parameters.yml.dist
-
-composer.lock
-
-app/config/parameters.yml.dist
