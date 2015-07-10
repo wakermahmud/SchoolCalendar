@@ -1,27 +1,18 @@
 <?php
 
-namespace KL\CalendarBundle\Controller;
+    namespace KL\CalendarBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+    use KL\CalendarBundle\Entity\Course;
+    use KL\CalendarBundle\Form\CourseType;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class CalendarController extends Controller {
+    class CalendarController extends Controller {
 
-    /**
-     * @Route("/calendar)
-     */
-    public function indexAction($name) {
+        public function createCourseAction() {
+            $course = new Course();
+            $form = $this->createForm(new CourseType, $course);
+
+            return $this->render('KLCalendarBundle::create-course.html.twig', array('form' => $form->createView()));
+        }
     }
-
-    /**
-     * @Route("/calendar/create-teacher)
-     */
-    public function createTeacherAction($name) {
-    }
-
-    /**
-     * @Route("/calendar/create-course)
-     */
-    public function createCourseAction($name) {
-    }
-}
